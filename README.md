@@ -1,4 +1,4 @@
-Run `ruby organize.rb` to receive a new csv output, aptly named `sol_client_vehicles_new.csv`.
+Run `ruby organize.rb` to receive a new csv output, aptly named `sol_client_vehicles_new.csv`. It is written to be flexible to handle any join table records, rather than hard-coding the column names for vehicles. It assumes the column names for the user will be consistent.
 
 Edge cases:
 - There may be instances in which the 'sfid' isn't properly formatted. i.e. `abC123`, `abc123`, and ` abc123` would all be different rows in that case. I took care of that by adding `.downcase.strip` to ensure proper matching.
